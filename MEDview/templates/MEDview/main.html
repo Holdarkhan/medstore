@@ -1,0 +1,100 @@
+{% extends "MEDview/start.html" %}
+
+{% block calendar %}
+<!-- block of links to other pages -->
+<div class="general_Wrapper">
+	<a class="links_to_other_pages" href="/search/"><div id="btn_linkTo_search_page">поиск</div></a>
+	<a class="links_to_other_pages" href="/stat/stat"><div id="btn_linkTo_statistic_page">статистика</div></a>
+</div>
+<!-- ----------------------------- -->
+<div id="calendarWrapper_year">
+	<div id="year_back_btn" class="btn_Year_Month_back"><br></div>
+	<div id="year_forward_btn" class="btn_Year_Month_forward"><br></div>
+	<div class="calendarWrapper_Value" id="selYear">{{ Year }}</div>
+</div>
+<!--
+<div id="calendarWrapper_today">
+	<span id="selectedDay">{{ Day }}</span>
+	<ul id="selectedDay_info">
+		<li id="global_vizovov_count">вызовов {{ Vizovov }}</li><li id="global_green_money">выручка {{ Money }}</li>
+	</ul>
+</div>
+-->
+<div id="calendarWrapper_today">
+	<span id="selectedDay">{{ Day }}</span>
+	<div id="selectedDay_info_wrapper">
+		<ul id="selectedDay_info">
+			<li id="global_vizovov_count">вызовов {{ Vizovov }}</li><li id="global_green_money">выручка {{ Money }}</li>
+		</ul>
+	</div>
+</div>
+
+<div id="calendarWrapper_month">
+	<div id="month_back_btn" class="btn_Year_Month_back"><br></div>
+	<div id="month_forward_btn" class="btn_Year_Month_forward"><br></div>
+	<div class="calendarWrapper_Value" id="selMonth">{{ Month }}</div>
+</div>
+{{ defineCalendar|safe }}
+{% endblock %}
+
+{% block records %}
+<div id="btn_newRecord_search" class="btn_newRecord"><br></div>
+<div id="btn_newRecord_add" class="btn_newRecord"><span>новая запись</span></div>
+<input type="text" autocomplete="off" placeholder="имя | фамилия | отчество" id="newRecord_inputSearch"/>
+<div id="searchResults"><ul></ul></div>
+{% for record in Records %}
+<div class="record"><div class="record_this">
+	<ul class="record_left_col">
+		<li class="name1">{{record.KeyName.Name1}}</li>
+ 		<li class="name2">{{record.KeyName.Name2}}</li>
+ 		<li class="name3">{{record.KeyName.Name3}}</li>
+ 	</ul>
+ 	<ul class="record_right_col">
+		<li><input type="text" class="record_greenMoney" value="{{record.GreenMoney}}"/></li>
+ 		<li>
+ 			<dl class="record_Firms">
+      			<dt><span>{{record.Firm}}</span></dt>
+      		 	<dd>
+       		 		<ul class="records_FirmsList">
+        	 			<li>1 доктор</li>
+   	    	 			<li>альтмедика</li>
+   	    	 			<li>веромед</li>
+   	    	 			<li>союз врачей</li>
+       		 		</ul>
+      		 	</dd>
+     		</dl>
+ 		</li>
+ 		<li><input type="text" class="record_redMoney" value="{{record.RedMoney}}"/></li>
+ 	</ul>
+</div></div>
+{% endfor %}
+{% endblock %}
+
+{% block patient %}
+<div class="patient_info">
+	<label class="patient_info_row"><span class="patient_label">И</span><input type="text" id="patient_Name1" class="patient_Names"/></label>
+	<label class="patient_info_row"><span class="patient_label">Ф</span><input type="text" id="patient_Name2" class="patient_Names"/></label>
+	<label class="patient_info_row"><span class="patient_label">О</span><input type="text" id="patient_Name3" class="patient_Names"/><span class="patient_label">В</span><input type="text" id="patient_Age" class="patient_Names" maxlength="2"/></label>
+</div>
+<div class="patient_info">
+	<ul class="patient_Div_wrapper">
+		<li><span class="patient_labels">адрес</span><input type="text" id="patient_Street" class="patient_Names"/></li>
+	</ul>
+	<div class="patient_Div_wrapper">
+	<span class="patient_labels">дом</span><input type="text" id="patient_House" class="patient_Names"/><span class="patient_labels">корпус</span><input type="text" id="patient_KC" class="patient_Names"/><span class="patient_labels">подъезд</span><input type="text" id="patient_Porch" class="patient_Names" maxlength="3"/><span class="patient_labels">код</span><input type="text" id="patient_Passwd" class="patient_Names"/><span class="patient_labels">этаж</span><input type="text" id="patient_Floor" class="patient_Names" maxlength="3"/><span class="patient_labels">квартира</span><input type="text" id="patient_Apt" class="patient_Names" maxlength="3"/>
+	</div>
+</div>
+<div class="patient_info">
+	<div class="patient_Div_wrapper">
+	<span class="patient_labels">телефоны</span><input type="text" id="patient_Tel1" class="patient_Names"/><input type="text" id="patient_Tel2" class="patient_Names"/>
+	</div>
+</div>
+<div id="btn_save_info" class="patient_info">сохранить</div>
+<div class="patient_info">
+	<div class="patient_Div_wrapper">
+	<div id="label_patient_info">дополнительно</div><div id="label_patient_decease">лечение</div>
+	<textarea rows="7" id="textarea_Info"></textarea>
+ 	<textarea rows="7" id="textarea_Decease"></textarea>
+ 	</div>
+</div>
+{% endblock %}

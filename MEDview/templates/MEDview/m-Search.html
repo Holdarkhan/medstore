@@ -1,0 +1,60 @@
+{% extends "MEDview/Index.html" %}
+
+{% block Title %}
+<title>MED store 3 // Поиск</title>
+{% endblock %}
+
+{% block css %}
+<link href="/static/MEDview/CSS/css-Search.css" rel="stylesheet">
+{% endblock %}
+
+{% block ToEdit %}
+<a class="links_to_other_pages" id="link_to_edit" href="/m/"><span>календарь</span></a>
+{% endblock %}
+
+{% block ToStat %}
+<a class="links_to_other_pages" id="link_to_statistic" href="/stat/stat"><span>статистика</span></a>
+{% endblock %}
+
+{% block search %}
+
+<div id="searchBar_wrapper">
+	<div><input type="text" id="search_input"/></div>
+</div>
+<div id="loading_panel"><br></div>
+<div id="search_results_wrapper">
+	<!-- <div class="search_result">
+		<ul class="patient_fio">
+			<li>Колдаров</li>
+			<li>Артур</li>
+			<li>Валерьевич</li>
+		</ul>
+		<div class="patient_details_address_wrapper">
+			<div class="patient_details_label">адрес<span class="patient_details_val">Авиамоторная</span></div>
+			<div class="patient_details_label">дом<span class="patient_details_val">21</span></div>
+			<div class="patient_details_label">корпус/строение<span class="patient_details_val">1</span></div>
+			<div class="patient_details_label">подъезд<span class="patient_details_val">1</span></div>
+			<div class="patient_details_label">код<span class="patient_details_val">7#645</span></div>
+			<div class="patient_details_label">этаж<span class="patient_details_val">2</span></div>
+			<div class="patient_details_label">квартира<span class="patient_details_val">7</span></div>
+		</div>
+		<div class="patient_details_phones_wrapper">
+			<div class="patient_detail_else_label">телефоны</div>
+			<div class="patient_detail_phone_val">89067377902</div>
+			<div class="patient_detail_phone_val">89067377902</div>
+		</div>
+		<div class="patient_detail_vizovs_label">вызовы</div>
+		<div class="patient_details_vizovs_wrapper">
+			<table class="vizovi">
+				<tr><td class="vizov_DATE">2013/сентябрь/25</td><td class="vizov_FIRM">Альтмедика</td><td class="vizov_EMPTY"></td><td class="vizov_RED">1500</td><td class="vizov_GREEN">2000</td></tr>
+				<tr><td><textarea></textarea></td><td colspan="4"><textarea></textarea></td></tr>
+			</table>
+		</div>
+	</div> -->
+</div>
+
+{% endblock %}
+
+{% block JS %}
+<script type="text/javascript" src="/static/MEDview/JS/m-Search.js"></script>
+{% endblock %}

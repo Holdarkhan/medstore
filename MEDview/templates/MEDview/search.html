@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+ <head>
+ 	<title>MED store 3 // Поиск </title>
+ 	<meta charset="utf-8"/>
+ 	{% load staticfiles %}
+ 	<link href="{% static "MEDview/CSS/medsearch.css" %}" rel="stylesheet">
+ 	<script type="text/javascript" src="{% static "MEDview/JS/jQ.js" %}"></script>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
+ <body>
+ 	<div id="search_input_label"><br></div><input type="text" id="search_input"/>
+ 	<div id="search_input_switcher_Names">фио</div><div id="search_input_switcher_Address">дополнительные поля</div> 	
+ <script type="text/javascript" src="{% static "MEDview/JS/search.js" %}"></script>
+ </body>
+</html> -->
+
+{% extends "MEDview/Index.html" %}
+
+{% block Title %}
+<title>MED store 3 // Поиск</title>
+{% endblock %}
+
+{% block css %}
+<link href="/static/MEDview/CSS/css-Search.css" rel="stylesheet">
+{% endblock %}
+
+{% block Search %}
+
+<div id="searchBar_wrapper">
+
+</div>
+
+{% endblock %}
+
+{% block JS %}
+<script type="text/javascript" src="/static/MEDview/JS/m-Search.js"></script>
+{% endblock %}

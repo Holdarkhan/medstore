@@ -1,0 +1,114 @@
+{% extends "MEDview/Index.html" %}
+
+{% block calendar %}
+<div id="calendarHeader_wrapper">
+ <div id="year_wrapper">
+	<div id="year_back_btn" class="btn_back"><br></div>
+	<div id="year_forward_btn" class="btn_forward"><br></div>
+	<div id="selected_year">{{ Year }}</div>
+ </div>
+
+ <div id="day_wrapper">
+ 	<table id="day_wrapper_inside">
+ 	 <tr>
+ 		<td rowspan="2" id="selected_day_leftCol"><span id="test"></span>{{ Day }}</td>
+ 		<td>вызовов: <span id="selected_day_vizovov_count">{{ Vizovov }}</span></td>
+ 	 </tr>
+ 	 <tr>
+ 	 	<td>доход: <span id="selected_day_money_count">{{ Money }}</span></td>
+ 	 </tr>
+ 	</table>
+ </div>
+
+ <div id="month_wrapper">
+ 	<div id="month_back_btn" class="btn_back"><br></div>
+	<div id="month_forward_btn" class="btn_forward"><br></div>
+	<div id="selected_month">{{ Month }}</div>
+ </div>
+
+ <div id="grid_wrapper">
+ 	{{ defineCalendar|safe }}
+ </div>
+</div>
+
+<div id="column_wrapper">
+	<div id="new_record_wrapper">
+	 	<div class="new_record" id="new_record_search"><span id="search_lable">найти</span><br></div>
+	 	<div class="new_record" id="new_record_new">новая запись</div>
+	 	<div id="new_record_search_input"><input type="text" placeholder="пациент" id="patient_search_input"/></div>
+	 	<div id="new_record_search_results">
+	 		<ul class="ner_record_search_results_patient">
+	 			<li>Name1</li>
+	 			<li>Name2</li>
+	 			<li>Name3</li>
+	 		</ul>
+	 	</div>
+	</div>
+	<div id="records_patients">
+	 	<div id="record_patient_loading"><br></div>
+	</div>
+</div>
+
+<div id="patient_record_info_wrapper">
+	<table><tr>
+	 <td class="patient_record_info_label">И</td>
+	 <td class="patient_record_info_value"><input type="text" class="patient_record_input" id="Name1"/></td>
+	</tr></table>
+	<table><tr>
+	 <td class="patient_record_info_label">Ф</td>
+	 <td class="patient_record_info_value"><input type="text" class="patient_record_input" id="Name2"/></td>
+	</tr></table>
+	<table><tr>
+	 <td class="patient_record_info_label">О</td>
+	 <td class="patient_record_info_value" id="Name3_input"><input type="text" class="patient_record_input" id="Name3"/></td>
+	 <td class="patient_record_info_label">В</td>
+	 <td class="patient_record_info_value" id="Age_input"><input type="number" maxlenth="2" class="patient_record_input input_only_numbers" id="Age"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">адрес</td>
+		<td id="patient_record_value_address"><input type="text" class="patient_record_input" id="Street"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">дом</td>
+		<td id="patient_record_value_house"><input type="text" class="patient_record_input" id="House"/></td>
+		<td class="patient_record_label">корпус/строение</td>
+		<td id="patient_record_value_KC"><input type="text" class="patient_record_input" id="KC"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">подъезд</td>
+		<td id="patient_record_value_porch"><input type="number" class="patient_record_input input_only_numbers" id="Porch"/></td>
+		<td class="patient_record_label">код</td>
+		<td id="patient_record_value_passwd"><input type="text" class="patient_record_input" id="Passwd"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">этаж</td>
+		<td id="patient_record_value_floor"><input type="number" class="patient_record_input input_only_numbers" id="Floor"/></td>
+		<td class="patient_record_label">квартира</td>
+		<td id="patient_record_value_apt"><input type="number" class="patient_record_input input_only_numbers" id="Apt"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">телефон</td>
+		<td id="patient_record_value_tel1"><input type="text" class="patient_record_input" id="Tel1"/></td>
+	</tr></table>
+	<table><tr>
+		<td class="patient_record_label">телефон</td>
+		<td id="patient_record_value_tel2"><input type="text" class="patient_record_input" id="Tel2"/></td>
+	</tr></table>
+
+	<div id="patient_record_textarea_wrapper">
+		<div id="patient_record_switches">
+			<div id="switcher_notes">заметки</div>
+			<div id="switcher_decease">лечение</div>
+		</div>
+		<div id="notes_wrapper"><textarea id="Notes" rows="7"></textarea></div>
+		<div id="decease_wrapper"><textarea id="Decease" rows="7"></textarea></div>
+	</div>
+
+	<div id="save_record">сохранить</div>
+</div>
+{% endblock %}

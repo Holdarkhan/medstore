@@ -1,0 +1,176 @@
+@font-face {
+	font-family: PT;
+	src: url('../FONTS/PT-Sans.ttf');
+}
+body {
+	font-family: PT;
+	font-size: 200%;
+	color: #FFF;
+	margin: 0 auto;
+	background-image: url('../IMG/bg.jpg');
+	padding: 1%;
+}
+textarea {
+	font-family: PT;
+	font-size: 100%;
+	color: #FFF;
+	background-color: #8295D7;
+	box-shadow: 0 3px 6px -6px black;
+	resize: none;
+	border: none;
+	width: 100%;
+}
+ul {
+	margin: 0;
+}
+
+input {
+	font-family: PT;
+	font-size: 100%;
+	border: none;
+}
+#search_input {
+	width: 60%;
+	box-shadow: 0 8px 6px -6px #666;
+	margin-bottom: 20px;
+	float: left;
+}
+#search_input_label {
+	padding-bottom: 3px;
+	width: 5%;
+	float: left;
+	background-color: #9573BF;
+	box-shadow: 0 8px 6px -6px #666;
+	background-image: url('../IMG/search.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+#search_input_switcher_Names {
+	padding-bottom: 3px;
+	width: 10%;
+	float: left;
+	background-color: #F36825;
+	box-shadow: 0 8px 6px -6px #666;
+	text-align: center;
+	cursor: pointer;
+}
+#search_input_switcher_Address {
+	padding-bottom: 3px;
+	width: 25%;
+	background-color: gray;
+	box-shadow: 0 8px 6px -6px #666;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}
+.search_result_wrapper {
+	width: 100%;
+}
+.patient_result {
+	background-color: #9573BF;
+	box-shadow: 0 5px 6px -6px black;
+}
+.patient_namesColumn {
+	width: 25%;
+}
+.label {
+	background-color: #A8493D;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.patient_Info {
+	width: 20%;
+}
+.patient_Decease {
+	width: 20%;
+}
+.btn_down:hover {
+	background-color: gray;
+	box-shadow: 0 6px 6px -6px black;
+	color: black;
+}
+.btn_down {
+	background-color: gray;
+	color: gray;
+	text-align: center;
+	width: 40%;
+	box-shadow: 0 6px 6px -6px black;
+	cursor: pointer;
+	margin-bottom: 15px;
+	margin-left: 60%;
+}
+.vizovi {
+	width: 100%;
+	background-color: #9573BF;
+}
+.vizovi td {
+	border: 1px solid black;
+}
+.money_total_wrapper {
+	font-size: 50%;
+	border-radius: 10px;
+	background-color: #8FBE00;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-shadow: 0 0px 2px 1px #8FBE00;
+}
+.detailedVizovs td {
+	box-shadow: 0 6px 6px -6px black;
+}
+.detailedVizovs {
+	width: 100%;
+	text-align: center;
+}
+.greenMoney {
+	float: left;
+	width: 10%;
+}
+.redMoney {
+	float: right;
+	width: 10%;
+}
+.col_Year {
+	width: 15%;
+	background-color: #8FBE00;
+}
+.col_Month {
+	width: 20%;
+	background-color: #8FBE00;
+}
+.col_Day {
+	width: 10%;
+	background-color: #8FBE00;
+}
+.col_Detail {
+	background-color: #8FBE00;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.searched_str {
+	background-color: #50B72A;
+}
+.label_value {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 1280px) {
+	body { font-size: 100%; }
+
+@media only screen and (max-width: 800px) {
+	body { font-size: 100%; }
+	textarea { display: none; }
+}
+@media only screen and (max-width: 768px) {
+	body { font-size: 100%; }
+	textarea { display: none; }
+}
+@media only screen and (max-width: 480px) {
+	body { font-size: 90%; }
+	textarea { display: none; }
+	#search_input_switcher_Address { font-size: 88%; }
+}

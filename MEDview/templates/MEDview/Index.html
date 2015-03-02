@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+ 	{% block Title %}{% endblock %}
+ 	<meta charset="utf-8"/>
+ 	{% load staticfiles %}
+ 	<meta name="application-name" content="MEDstore3"/>
+	<meta name="msapplication-TileColor" content="#f50a0a"/>
+	<meta name="msapplication-square70x70logo" content="{% static "MEDview/IMGtiny.png" %}"/>
+	<meta name="msapplication-square150x150logo" content="{% static "MEDview/IMG/square.png" %}"/>
+	<meta name="msapplication-wide310x150logo" content="{% static "MEDview/IMG/wide.png" %}"/>
+	<meta name="msapplication-square310x310logo" content="{% static "MEDview/IMG/large.png" %}"/>
+ 	{% block css %}{% endblock %}
+ 	<script type="text/javascript" src="{% static "MEDview/JS/jQ.js" %}"></script>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+ </head>
+ <body>
+  <header>
+  	{% block ToEdit %}{% endblock %}
+  	{% block ToSearch %}{% endblock %}
+  	{% block ToStat %}{% endblock %}
+  </header>
+
+  {% block calendar %}{% endblock %}
+
+  {% block search %}{% endblock %}
+
+  {% block statistic %}{% endblock %}
+ 	
+  {% block JS %}{% endblock %}
+
+ </body>
+</html>

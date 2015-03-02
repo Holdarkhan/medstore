@@ -1,0 +1,490 @@
+@font-face {
+	font-family: PT;
+	src: url('../FONTS/PT-Sans.ttf');
+}
+body {
+	font-family: PT;
+	font-size: 200%;
+	color: #FFF;
+	margin: 0 auto;
+	background-image: url('../IMG/bg.jpg');
+	background-size: 100%;
+	padding: 1%;
+}
+textarea {
+	font-family: PT;
+	font-size: 100%;
+	color: #FFF;
+	background-color: #8295D7;
+	box-shadow: 0 3px 6px -6px black;
+	resize: none;
+	border: none;
+	width: 100%;
+	display: none;
+}
+ul {
+	margin: 0;
+}
+input {
+	font-family: PT;
+	font-size: 100%;
+	border: none;
+}
+#mainColumn1 {
+	float: left;
+	width: 30%;
+}
+#mainColumn2 {
+	float: left;
+	width: 25%;
+	margin-left: 1%;
+}
+#mainColumn3 {
+	float: left;
+	width: 43%;
+	margin-left: 1%;
+	visibility: hidden;
+}
+
+.general_Wrapper {
+	display: table;
+	width: 100%;
+}
+.links_to_other_pages {
+	display: table-cell;
+	width: auto;
+	color: #BBB;
+	text-decoration: none;
+}
+#btn_linkTo_search_page:hover {
+	background-color: #242424;
+	color: #FFF;
+}
+#btn_linkTo_search_page {
+	background-color: #424242;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	border-bottom: 5px solid #97959C;
+	box-shadow: 0 8px 6px -6px black;
+}
+
+#btn_linkTo_statistic_page:hover {
+	background-color: #242424;
+	color: #FFF;
+}
+#btn_linkTo_statistic_page {
+	background-color: #424242;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	border-bottom: 5px solid #97959C;
+	box-shadow: 0 8px 6px -6px black;
+}
+/***********CALENDAR************************/
+#calendarWrapper_year {
+	background-color: #835885;
+	/*border-bottom: 5px solid #6B428E;*/
+}
+#calendarWrapper_month {
+	background-color: #835885;
+	/*border-top: 5px solid #6B428E;*/
+	box-shadow: 0 8px 6px -6px black;
+}
+.btn_Year_Month_back:hover {
+	background-image: url('../IMG/back_pressed.png');
+}
+.btn_Year_Month_back {
+	float: left;
+	width: 15%;
+	cursor: pointer;
+	background-image: url('../IMG/back.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.btn_Year_Month_forward:hover {
+	background-image: url('../IMG/forward_pressed.png');
+}
+.btn_Year_Month_forward {
+	width: 15%;
+	float: right;
+	cursor: pointer;
+	background-image: url('../IMG/forward.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+.calendarWrapper_Value {
+	text-align: center;
+}
+#calendarWrapper_today {
+	display: table;
+	width: 100%;
+	background-color: #EF5F3A;
+}
+#selectedDay {
+	display: table-cell;
+	width: auto;
+	font-size: 350%;
+	padding-left: 5%;
+}
+#selectedDay_info_wrapper {
+	display: table-cell;
+	width: auto;
+}
+#selectedDay_info {
+	display: inline-block;
+}
+#calendarMesh {
+	width: 100%;
+}
+#calendarMesh tr:first-child{
+	width: 100%;
+	text-align: center;
+}
+#calendar_weeksRow td:nth-child(1n+6) { /* weekends label */
+	/*background-color: #5F1F1C; /* change to img */
+	color: #5F1F1C;
+}
+.days_Weekends_days {
+	background-color: #6F1F1C;
+	text-align: center;
+	cursor: pointer;
+}
+.days_Works_days {
+	background-color: #424242;
+	text-align: center;
+	cursor: pointer;
+}
+.days_empty {
+	visibility: hidden;
+}
+.day_vizovov_hidden {
+	font-size: 50%;
+	width: 100%;
+	background-color: #9573BF;
+	visibility: hidden;
+}
+.day_money_hidden {
+	background-color: #50B72A;
+	font-size: 50%;
+	width: 100%;
+	visibility: hidden;
+}
+.day_vizovov {
+	font-size: 50%;
+	width: 100%;
+	background-color: #845986;
+}
+.day_money {
+	background-color: #97959C;
+	font-size: 50%;
+	width: 100%;
+}
+.day_work {
+	width: 100%;
+}
+/**********RECORDS*******************************/
+.record_greenMoney {
+	background-color: #8EA655;
+	width: 100%;
+	color: #FFF;
+	text-align: center;
+}
+.record_redMoney {
+	background-color: #A8493D;
+	width: 100%;
+	color: #FFF;
+	text-align: center;
+}
+.record_Firms dt {
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+}
+.records_FirmsList li:hover {
+	background-color: #222;
+	padding-left: 10px;
+}
+.records_FirmsList li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+.records_FirmsList {
+	position: absolute;
+	display: none;
+	background-color: #424242;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: 0 8px 6px -6px black;
+}
+#searchResults ul li:hover {
+	background-color: #50B72A;
+}
+#searchResults ul li {
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	overflow: hidden;
+}
+#searchResults ul {
+	list-style: none;
+	padding: 0px;
+}
+#searchResults {
+	background-color: #835885;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: 0 8px 6px -6px black;
+}
+#btn_newRecord_search {
+	width: 10%;
+	float: left;
+	box-shadow: 0 1px 6px -6px black;
+	background-image: url('../IMG/search.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#newRecord_inputSearch {
+	width: 98%;
+	padding-left: 2%;
+	color: #FFF;
+	margin-bottom: 15px;
+	background-color: #835885;
+	box-shadow: 0 8px 6px -6px black;
+	display: none;
+	text-align: center;
+}
+.btn_newRecord {
+	background-color: #424242;
+	box-shadow: 0 8px 6px -6px black;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+.btn_newRecord:hover {
+	background-color: #111;
+}
+.record {
+	background-color: #424242;
+	box-shadow: 0 8px 6px -6px black;
+	margin-bottom: 5px;
+}
+.record_left_col {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+}
+.record_right_col {
+	padding-bottom: 10px;
+	width: 100%;
+	list-style: none;
+	padding-left: 0px;
+}
+
+/**********RECORDS*******************************/
+
+.patient_info {
+	background-color: #424242;
+	border-bottom: 5px solid #97959C;
+	box-shadow: 0 8px 6px -6px black;
+	width: 100%;
+	padding: 1%;
+	margin-bottom: 1%;
+}
+.patient_info_row {
+	width: 100%;
+	display: table;
+	overflow: hidden;
+	float: right;
+}
+.patient_info_row > * {
+	
+}
+.patient_Names {
+	color: #FFF;
+	background-color: #424242;
+	margin-bottom: 5px;
+	padding-left: 1%;
+	border: 2px solid #845986;
+	box-shadow:inset 0 0 7px black;
+	width: auto%;
+	display: table-cell;
+	overflow: hidden;
+}
+#patient_Name3 {
+	width: 73%;
+}
+.patient_Div_wrapper {
+	list-style: none;
+	padding: 1%;
+	width: 100%;
+	overflow: hidden;
+}
+.patient_label {
+	width: 5%;
+	display: table-cell;
+	display: inline-block;
+	padding-right: 1%;
+	padding-left: 1%;
+	text-align: center;
+	background-color: #845986;
+}
+#patient_Age {
+	width: 10%;
+	padding: 0px;
+	padding-bottom: 2px; /**WTF?**/
+	text-align: center;
+}
+.patient_labels {
+	padding-left: 1%;
+	padding-right: 1%;
+	text-align: center;
+	background-color: #845986;
+	box-shadow: 0 3px 6px -6px black;
+}
+#patient_Street {
+	width: 82%;
+}
+#patient_House {
+	width: 20%;
+}
+#patient_KC {
+	width: 15%;
+}
+#patient_Porch {
+	width: 12%;
+}
+#patient_Passwd {
+	width: 20.8%;
+}
+#patient_Floor {
+	width: 19.9%;
+}
+#patient_Apt {
+	width: 10%;
+}
+#patient_Tel1 {
+	width: 36%;
+	margin-right: 0.1%;
+}
+#patient_Tel2 {
+	width: 36%;
+}
+#label_patient_info:hover {
+	background-color: #50B72A;
+}
+#label_patient_decease:hover {
+	background-color: #50B72A;
+}
+#label_patient_info {
+	text-align: center;
+	background-color: #F36825;
+	box-shadow: 0 3px 6px -6px black;
+	width: 49%;
+	display: inline-block;
+	cursor: pointer;
+}
+#label_patient_decease {
+	text-align: center;
+	background-color: #F36825;
+	box-shadow: 0 3px 6px -6px black;
+	width: 49%;
+	margin-left: 1%;
+	display: inline-block;
+	cursor: pointer;
+}
+#btn_save_info:hover {
+	background-color: #222;
+}
+#btn_save_info {
+	width: 100%;
+	padding: 0px;
+	text-align: center;
+	background-color: red;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1366px) {
+	body { font-size: 140%; }
+}
+@media only screen and (max-width: 1280px) {
+	body { font-size: 150%; }
+	#patient_Street { width: 82%; }
+	#patient_House { width: 40%; }
+	#patient_KC { width: 26.6%; }
+	#patient_Porch { width: 30%; }
+	#patient_Passwd { width: 34.4%; }
+	#patient_Floor { width: 29.8%; }
+	#patient_Apt { width: 29.9%; }
+	#patient_Tel1 { width: 97%; }
+	#patient_Tel2 { width: 97%; }
+}
+@media only screen and (max-width: 800px) {
+	body { font-size: 130%; }
+	#calendarWrapper_today { font-size: 70%;}
+	#patient_Street { width: 77.2%; }
+	#patient_House { width: 35%; }
+	#patient_KC { width: 21.9%; }
+	#patient_Porch { width: 21.2%; }
+	#patient_Passwd { width: 32.7%; }
+	#patient_Floor { width: 24%; }
+	#patient_Apt { width: 24%; }
+	#patient_Tel1 { width: 97%; }
+	#patient_Tel2 { width: 97%; }
+	.record_left_col { list-style: none; padding-left: 5%; }
+	.patient_label { width: 8%; }
+	.patient_Names { width: 90%; }
+	#patient_Name3 { width: 72%; }
+}
+@media only screen and (max-width: 768px) {
+	body { font-size: 90%; }
+	#patient_Street { width: 82%; }
+	#patient_House { width: 40%; }
+	#patient_KC { width: 26%; }
+	#patient_Porch { width: 30%; }
+	#patient_Passwd { width: 34.4%; }
+	#patient_Floor { width: 29.9%; }
+	#patient_Apt { width: 29.9%; }
+	#patient_Tel1 { width: 97%; }
+	#patient_Tel2 { width: 97%; }
+}
+@media only screen and (max-width: 720px) {
+	body { font-size: 90%; }
+	#calendarWrapper_today { font-size: 80%;}
+	#patient_Street { width: 81.5%; }
+	#patient_House { width: 38%; }
+	#patient_KC { width: 27%; }
+	#patient_Porch { width: 27.5%; }
+	#patient_Passwd { width: 35.5%; }
+	#patient_Floor { width: 29.9%; }
+	#patient_Apt { width: 28.2%; }
+	#patient_Tel1 { width: 97%; }
+	#patient_Tel2 { width: 97%; }
+}
+@media only screen and (max-width: 480px) {
+	body { font-size: 200%; }
+	#mainColumn1 { width: 99%; margin-bottom: 5%;}
+	#mainColumn2 { width: 97%; }
+	#mainColumn3 { width: 95%; }
+	#patient_Street { width: 98%; }
+	#patient_House { width: 81.6%; }
+	#patient_KC { width: 70.8%; }
+	#patient_Porch { width: 65.6%; }
+	#patient_Passwd { width: 82.9%; }
+	#patient_Floor { width: 20.7%; }
+	#patient_Apt { width: 20.7%; }
+	#label_patient_info { width: 100%; margin-bottom: 2%; padding-right: 0px; }
+	#label_patient_decease { width: 100%; padding-left: 0px; margin-left: 0px; }
+}

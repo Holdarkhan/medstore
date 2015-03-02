@@ -1,0 +1,140 @@
+{% extends "MEDview/Index.html" %}
+
+{% block Title %}
+<title>MED store 3</title>
+{% endblock %}
+
+{% block css %}
+<link href="/static/MEDview/CSS/css-Edit.css" rel="stylesheet">
+{% endblock %}
+
+{% block ToSearch %}
+<a class="links_to_other_pages" id="link_to_search" href="/search/"><span>поиск</span></a>
+{% endblock %}
+
+{% block ToStat %}
+<a class="links_to_other_pages" id="link_to_statistic" href="/stat/stat"><span>статистика</span></a>
+{% endblock %}
+
+{% block calendar %}
+<div id="calendarHeader_wrapper">
+ <div id="year_wrapper">
+	<div id="year_back_btn" class="btn_back"><br></div>
+	<div id="year_forward_btn" class="btn_forward"><br></div>
+	<div id="selected_year">{{ Year }}</div>
+	<ul id="Years_list" class="live_search"><li>2008</li><li>2009</li><li>2010</li><li>2011</li><li>2012</li><li>2013</li><li>2014</li></ul>
+ </div>
+
+ <div id="day_wrapper">
+ 	<table id="day_wrapper_inside">
+ 	 <tr>
+ 		<td rowspan="2" id="selected_day_leftCol">{{ Day }}</td>
+ 		<td>вызовов: <span id="selected_day_vizovov_count">{{ Vizovov }}</span></td>
+ 	 </tr>
+ 	 <tr>
+ 	 	<td>доход: <span id="selected_day_money_count">{{ Money }}</span></td>
+ 	 </tr>
+ 	</table>
+ </div>
+
+ <div id="month_wrapper">
+ 	<div id="month_back_btn" class="btn_back"><br></div>
+	<div id="month_forward_btn" class="btn_forward"><br></div>
+	<div id="selected_month">{{ Month }}</div>
+	<ul id="Months_list" class="live_search"><li>Январь</li><li>Февраль</li><li>Март</li><li>Апрель</li><li>Май</li><li>Июнь</li><li>Июль</li><li>Август</li><li>Сентябрь</li><li>Октябрь</li><li>Ноябрь</li><li>Декабрь</li></ul>
+ </div>
+
+ <div id="grid_wrapper">
+ 	{{ defineCalendar|safe }}
+ </div>
+
+</div>
+
+<div id="column_wrapper">
+	<div id="new_record_wrapper">
+	 	<div class="new_record" id="new_record_search"><span id="search_lable">найти</span><br></div>
+	 	<div class="new_record" id="new_record_new">новая запись</div>
+	 	<div id="new_record_search_input"><input type="text" placeholder="пациент" id="patient_search_input"/></div>
+	 	<div id="new_record_search_results">
+	 		<ul class="ner_record_search_results_patient">
+	 			<li>Name1</li>
+	 			<li>Name2</li>
+	 			<li>Name3</li>
+	 		</ul>
+	 	</div>
+	</div>
+	<div id="records_patients">
+	 	<div id="record_patient_loading"><br></div>
+	</div>
+</div>
+
+<div id="patient_record_info_wrapper">
+	<table><tr>
+	 <td class="patient_record_info_label">Ф</td>
+	 <td class="patient_record_info_value"><input type="text" class="patient_record_input" id="Name2"/><ul id="Name2_live_search" class="live_search"></ul></td>
+	</tr></table>
+	<table><tr>
+	 <td class="patient_record_info_label">И</td>
+	 <td class="patient_record_info_value"><input type="text" class="patient_record_input" id="Name1"/><ul id="Name1_live_search" class="live_search"></ul></td>
+	</tr></table>
+	<table><tr>
+	 <td class="patient_record_info_label">О</td>
+	 <td class="patient_record_info_value" id="Name3_input"><input type="text" class="patient_record_input" id="Name3"/><ul id="Name3_live_search" class="live_search"></ul></td>
+	 <td class="patient_record_info_label">В</td>
+	 <td class="patient_record_info_value" id="Age_input"><input type="number" maxlenth="2" class="patient_record_input input_only_numbers" id="Age"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">адрес</td>
+		<td id="patient_record_value_address">
+			<input type="text" class="patient_record_input" id="Street"/>
+			<ul id="street_live_search" class="live_search">
+			</ul>
+		</td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">дом</td>
+		<td id="patient_record_value_house"><input type="text" class="patient_record_input" id="House"/></td>
+		<td class="patient_record_label">корпус/строение</td>
+		<td id="patient_record_value_KC"><input type="text" class="patient_record_input" id="KC"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">подъезд</td>
+		<td id="patient_record_value_porch"><input type="number" class="patient_record_input input_only_numbers" id="Porch"/></td>
+		<td class="patient_record_label">код</td>
+		<td id="patient_record_value_passwd"><input type="text" class="patient_record_input" id="Passwd"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">этаж</td>
+		<td id="patient_record_value_floor"><input type="number" class="patient_record_input input_only_numbers" id="Floor"/></td>
+		<td class="patient_record_label">квартира</td>
+		<td id="patient_record_value_apt"><input type="number" class="patient_record_input input_only_numbers" id="Apt"/></td>
+	</tr></table>
+
+	<table><tr>
+		<td class="patient_record_label">телефоны</td>
+		<td id="patient_record_value_tel1">
+			<input type="text" class="patient_record_input" id="Tel1"/>
+			<input type="text" class="patient_record_input" id="Tel2"/>
+		</td>
+	</tr></table>
+
+	<div id="patient_record_textarea_wrapper">
+		<div id="patient_record_switches">
+			<div id="switcher_notes">заметки</div>
+			<div id="switcher_decease">лечение</div>
+		</div>
+		<div id="notes_wrapper"><textarea id="Notes" rows="7"></textarea></div>
+		<div id="decease_wrapper"><textarea id="Decease" rows="7"></textarea></div>
+	</div>
+
+	<div id="save_record">сохранить</div>
+</div>
+{% endblock %}
+
+{% block JS %}
+<script type="text/javascript" src="/static/MEDview/JS/m-Edit.js"></script>
+{% endblock %}

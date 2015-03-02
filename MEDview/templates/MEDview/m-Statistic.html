@@ -1,0 +1,77 @@
+{% extends "MEDview/Index.html" %}
+
+{% block Title %}
+<title>MED store 3 // Статистика</title>
+{% endblock %}
+
+{% block css %}
+<link href="/static/MEDview/CSS/css-Statistics.css" rel="stylesheet">
+{% endblock %}
+
+{% block ToEdit %}
+<a class="links_to_other_pages" id="link_to_edit" href="/m/"><span>календарь</span></a>
+{% endblock %}
+
+{% block ToSearch %}
+<a class="links_to_other_pages" id="link_to_statistic" href="/search"><span>поиск</span></a>
+{% endblock %}
+
+{% block statistic %}
+	<div id="panel_of_years_wrapper">
+	{% for year in Years %}
+ 		<span class="bricks_years">{{ year.Year }}<span class="y_tag">0</span></span>
+	{% endfor %}
+	</div>
+
+	<div id="panel_of_months_wrapper">
+	 <span class="bricks_months"><span class="bricks_month_num">01<span class="m_tag">0</span></span>Январь</span>
+	 <span class="bricks_months"><span class="bricks_month_num">02<span class="m_tag">0</span></span>Февраль</span>
+	 <span class="bricks_months"><span class="bricks_month_num">03<span class="m_tag">0</span></span>Март</span>
+	 <span class="bricks_months"><span class="bricks_month_num">04<span class="m_tag">0</span></span>Апрель</span>
+	 <span class="bricks_months"><span class="bricks_month_num">05<span class="m_tag">0</span></span>Май</span>
+	 <span class="bricks_months"><span class="bricks_month_num">06<span class="m_tag">0</span></span>Июнь</span>
+	 <span class="bricks_months"><span class="bricks_month_num">07<span class="m_tag">0</span></span>Июль</span>
+	 <span class="bricks_months"><span class="bricks_month_num">08<span class="m_tag">0</span></span>Август</span>
+	 <span class="bricks_months"><span class="bricks_month_num">09<span class="m_tag">0</span></span>Сентябрь</span>
+	 <span class="bricks_months"><span class="bricks_month_num">10<span class="m_tag">0</span></span>Октябрь</span>
+	 <span class="bricks_months"><span class="bricks_month_num">11<span class="m_tag">0</span></span>Ноябрь</span>
+	 <span class="bricks_months"><span class="bricks_month_num">12<span class="m_tag">0</span></span>Декабрь</span>
+	</div>
+
+	<div id="panel_results">
+	 <table id="result_table">
+	 	<tr>
+	 		<td class="table_firm">«1 Доктор»</td><td id="OD_vc" class="firm_vcounts"></td><td id="OD_red" class="firm_RED"></td><td id="OD_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">«ВероМед»</td><td id="Ve_vc" class="firm_vcounts"></td><td id="Ve_red" class="firm_RED"></td><td id="Ve_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">«Альтмедика»</td><td id="Alt_vc" class="firm_vcounts"></td><td id="Alt_red" class="firm_RED"></td><td id="Alt_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">«Диагностика и Лечение»</td><td id="Laz_vc" class="firm_vcounts"></td><td id="Laz_red" class="firm_RED"></td><td id="Laz_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">Володина</td><td id="Vol_vc" class="firm_vcounts"></td><td id="Vol_red" class="firm_RED"></td><td id="Vol_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">прочие</td><td id="Else_vc" class="firm_vcounts"></td><td id="Else_red" class="firm_RED"></td><td id="Else_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_firm">пациенты</td><td id="Pat_vc" class="firm_vcounts"></td><td colspan="2" id="Pat_green" class="firm_GREEN"></td>
+	 	</tr>
+	 	<tr>
+	 		<td class="table_ITOGO">ИТОГО</td><td id="itogo_vcounts" class="firm_vcounts"></td><td id="itogo_RED" class="firm_RED"></td><td id="itogo_GREEN" class="firm_GREEN"></td>
+	 	</tr>
+	 </table>
+	 <div id="loading"><br></div>
+	</div>
+
+	<div id="submit">загрузить</div>
+
+{% endblock %}
+
+{% block JS %}
+<script type="text/javascript" src="/static/MEDview/JS/m-Statistics.js"></script>
+{% endblock %}

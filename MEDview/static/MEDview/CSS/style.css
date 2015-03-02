@@ -1,0 +1,523 @@
+@font-face {
+	font-family: PT;
+	src: url('../FONTS/PT-Sans.ttf');
+}
+/**HEADER******************************************************************************************************/
+header {
+	clear: both;
+	text-shadow: 0 0 0.01em #FFF;
+	border-bottom: 5px solid #8667AC;
+	background-color: #9573BF;
+	height: 60px;
+	padding-top: 10px;
+	margin-bottom: 15px;
+	box-shadow: 0 8px 6px -8px black;
+}
+/**LEFT*TABLE*******************************************************************************************************/
+#centerTable_Calendar {
+	float: left;
+	width: 25%;
+	border-collapse: collapse;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#centerTable_headerDay {
+	background-color: #F36825;
+	box-shadow: 0 8px 6px -6px black;
+}
+#centerTable_searchInput {
+	width: 40%;
+	margin-left: 1%;
+	border: none;
+	box-shadow: 0 8px 6px -6px black;
+}
+#centerTable_headerMonth {
+	background-color: #9573BF;
+	box-shadow: 0 8px 6px -8px black;
+}
+#calendarMesh_weeksLabel td {
+	border: none;
+	font-size: 0.6em;
+	text-align: center;
+}
+#calendarMesh_weeksLabel td:nth-child(1n+6) {}
+#calendarMesh {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	cursor: pointer;
+}
+#calendarMesh td {
+	padding: 10px;
+	text-align: right;
+}
+#calendarMesh td:nth-child(1n+6) {}
+/**CENTER*TABLE*****************************************************************************************************/
+#leftTable_insertNewRecord_btn td:hover {
+	background-color: #50B72A;
+	border-bottom: 5px solid #48A426;
+}
+#leftTable_insertNewRecord_btn td{
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	margin-bottom: 15px;
+	width: 100%;
+}
+#leftTable_Records {
+	float: left;
+	width: 20%;
+	border-collapse: collapse;
+	cursor: pointer;
+	text-shadow: 0 0 0.01em #EEEEDD;
+	margin-right: 15px;
+}
+#leftTable_Records tr {
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	box-shadow: 0 8px 6px -8px black;
+}
+/**RIGHT*TABLE******************************************************************************************************/
+#rightTable_Info_switch {
+	text-align: center;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	float: left;
+	width: 50%;
+	cursor: pointer;
+}
+#rightTable_Decease_switch {
+	text-align: center;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	float: right;
+	width: 50%;
+	cursor: pointer;
+}
+#centerTable_saveBtn:hover {
+	background-color: #FF1825;
+}
+#centerTable_saveBtn {
+	background-color: #F36825;
+	text-align: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+#rightTable_Phones span {
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-bottom: 1px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#rightTable_Phones input:nth-child(odd) {
+	border: none;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	text-align: center;
+	width: 45%;
+}
+#rightTable_Phones input:nth-child(even) {
+	border: none;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	border-right: 5px solid #857466;
+	text-align: center;
+	width: 45%;
+}
+#rightTable_addressInfo span {
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-bottom: 1px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#rightTable_addressInfo input {
+	border: none;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	text-align: center;
+	width: 16.8%
+}
+#rightTable_addressInput2 input {
+	border: none;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	width: 15.5%;
+}
+#rightTable_addressInput input {
+	border: none;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	width: 55%;
+	float: left;
+}
+#rightTable_addressLabel2 {
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	float: left;
+	width: 10%;
+}
+#rightTable_addressLabel {
+	float: left;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 15%;
+}
+#rightTable_greenMoney {
+	border: none;
+	background-color: #50B72A;
+	border-bottom: 5px solid #48A426;
+	color: #FFF;
+	width: 29.5%;
+	text-align: center;
+}
+#rightTable_redMoney {
+	border: none;
+	background-color: #D36352;
+	border-bottom: 5px solid #BD594A;
+	color: #FFF;
+	float: left;
+	width: 29.5%;
+	text-align: center;
+}
+#rightTable_Firm dd {
+	padding: 0;
+	position: absolute;
+}
+#rightTable_Firm {
+	margin: auto;
+	float: left;
+}
+#rightTable_Firm dd ul {
+	margin: 0 auto;
+}
+#rightTable_Firm dd ul li:hover {
+	background-color: #50B72A;
+	border-bottom: 5px solid #48A426;
+}
+#rightTable_Firm dd ul li {
+	margin: 0 auto;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	border-right: 5px solid #8667AC;
+	border-left: 5px solid #8667AC;
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+#rightTable_vizov dl {
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	padding-top: 2px;
+	padding-left: 5px;
+	width: 40%;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+#rightTable_ageInput {
+	border: none;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	color: #FFF;
+	width: 8%;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: center;
+}
+#rightTable_namesInput_O {
+	border: none;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	color: #FFF;
+	width: 78.4%;
+	padding-left: 5px;
+	float: left;
+}
+#rightTable_namesLabel_Age {
+	width: 6%;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-top: 2px;
+	float: left;
+}
+.rightTable_namesInput {
+	border: none;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	width: 93.1%;
+	padding-left: 5px;
+}
+.rightTable_namesLabel {
+	float: left;
+	width: 6%;
+	color: #FFF;
+	background-color: #9573BF;
+	border-bottom: 5px solid #8667AC;
+	text-align: center;
+	padding-top: 2px;
+}
+#rightTable tr td {
+	padding: 10px;
+}
+#rightTable tr {
+	background-color: #948172;
+	box-shadow: 0 8px 6px -8px black;
+}
+#rightTable {
+	margin-right: 15px;
+	padding-top: 0px;
+	border: none;
+	border-collapse: collapse;
+}
+/**DEFAULTS*FOR*DOM*ELEMENTS****************************************************************************************/
+body {
+	font-family: PT;
+	font-size: 220%;
+	color: #FFF;
+	margin: 0 auto;
+	background-image: url('../IMG/bg.jpg');
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+input {
+	font-family: PT;
+	font-size: 100%;
+	color: #111;
+}
+textarea {
+	font-family: PT;
+	font-size: 100%;
+	color: #CCC;
+	background-color: #948172;
+	border-bottom: 5px solid #857466;
+	box-shadow: 0 8px 6px -8px black;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	padding-left: 10px;
+	resize: none;
+	width: 98.4%;
+}
+/* CLASS SETTINGS FOR ELEMENTS */
+
+.centerTable_calendarRow_hidden {
+	visibility: hidden;
+}
+
+.headerList_links {
+	display: inline;
+}
+.headerList_links li {
+	display: inline;
+	float: right;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* ID SETTINGS FOR ELEMENTS */
+
+#lastRecord_label {
+	padding-left: 15px;
+}
+
+#lastRecord_day {
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 2px solid #FFF;
+	border-radius: 10px;
+}
+/*--------------------------------------------------------------------------------RIGHT_TABLE-*/
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------CENTER_TABLE-*/
+
+#centerTable_searchInput_btn {
+	float: right;
+	text-align: center;
+	width: 25%;
+	background-color: #50B72A;
+	border-bottom: 5px solid #48A426;
+	border-top: 5px solid #48A426;
+	padding-top: 2px;
+}
+
+#centerTable_searchRecord_label {
+	background-color: #556270;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#centerTable_addNewRecord_btn {
+	background-color: #9EA6B1;
+	text-align: center;
+	border-bottom: 5px solid #4C5865;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#centerTable_btnForward_Month {
+	cursor: pointer;
+	width: 18%;
+	text-align: center;
+	background-image: url('../IMG/arrow_bottom_right_black.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#centerTable_btnForward_Year {
+	cursor: pointer;
+	padding-right: 20px;
+	width: 18%;
+	text-align: center;
+	background-image: url('../IMG/arrow_bottom_right_black.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#centerTable_btnBack_Year {
+	cursor: pointer;
+	width: 18%;
+	text-align: center;
+	background-image: url('../IMG/arrow_bottom_left_black.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#centerTable_btnBack_Month {
+	cursor: pointer;
+	width: 18%;
+	text-align: center;
+	background-image: url('../IMG/arrow_bottom_left_black.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#centerTable_yearLabel {
+	text-align: center;
+	font-size: 1.3em;
+}
+#centerTable_monthLabel {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+
+#centerTable_headerDay div:nth-child(2) {
+	padding-top: 30px;
+	color: #FFF;
+}
+#centerTable_selectedDay {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 343%;
+	color: #FFF;
+	float: left;
+}
+
+/*--------------------------------------------------------------------------------LEFT_TABLE-*/
+
+
+ .leftTable_Record_redMoney {
+ 	color: #FFF;
+ 	text-shadow: 0 0 0.01em #FFF, 0 0 0.02em #FFF;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ 	border-bottom: 5px solid #BD594A;
+ 	background-color: #D36352;
+ }
+ .leftTable_Record_greenMoney {
+ 	color: #FFF;
+ 	text-shadow: 0 0 0.01em #FFF, 0 0 0.02em #FFF;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ 	border-bottom: 5px solid #48A426;
+ 	background-color: #50B72A;
+ }
+ .leftTable_Records_col2 {
+  	
+ }
+ .leftTable_Records_col2 li {
+  	text-align: center;
+ }
+#leftTable_Records ul {
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1366px) {
+	body {
+		font-size: 190%;
+	}
+	header {
+		height: 50px;
+	}
+	#rightTable_addressInfo input {
+		width: 13.5%;
+	}
+	#rightTable_addressInput2 input {
+		width: 13%;
+	}
+	#rightTable_Phones input:nth-child(even) {
+		width: 43%;
+	}
+	#rightTable_Phones input:nth-child(odd) {
+		width: 43%;
+	}
+}
+/*
+@media screen and (max-width: 900px) {
+	.lastRecord_date {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	#leftTable_Records {
+		float: none;
+		width: 100%;
+	}
+	#centerTable_Calendar {
+		float: left;
+		width: 100%;
+		border: none;
+	}
+}*/

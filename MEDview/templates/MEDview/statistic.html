@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+ 	<title>MED store 3 // Статистика </title>
+ 	<meta charset="utf-8"/>
+ 	{% load staticfiles %}
+ 	<link href="{% static "MEDview/CSS/medstat.css" %}" rel="stylesheet">
+ 	<script type="text/javascript" src="{% static "MEDview/JS/jQ.js" %}"></script>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
+ <body>
+ 	<table id="Years_bricks" class="Bricks">
+ 		<tr>
+ 		{% for year in Years %}
+ 		<td class="tdBricks tdY">{{ year.Year }}</td>
+ 		{% endfor %}
+ 		</tr>
+ 	</table>
+ 	<table id="Months_bricks" class="Bricks">
+ 		<tr>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Февраль</span><span class="mBricks_number">02</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Январь</span><span class="mBricks_number">01</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Март</span><span class="mBricks_number">03</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Апрель</span><span class="mBricks_number">04</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Май</span><span class="mBricks_number">05</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Июнь</span><span class="mBricks_number">06</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Июль</span><span class="mBricks_number">07</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Август</span><span class="mBricks_number">08</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Сентябрь</span><span class="mBricks_number">09</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Октябрь</span><span class="mBricks_number">10</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Ноябрь</span><span class="mBricks_number">11</span></td>
+ 		<td class="tdBricks tdM"><span class="mBricks_name">Декабрь</span><span class="mBricks_number">12</span></td>
+ 		</tr>
+ 	</table>
+ 	<div id="button">вывести статистику за выбранный период</div>
+ 	<table id="Firms_Stats">
+ 		<tr>
+ 			<td class="tdFirm"><span>«1 Доктор»</span></td><td class="tdRedMoney"><span id="redMoney_Doctor_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Doctor_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>«ВероМед»</span></td><td class="tdRedMoney"><span id="redMoney_Veromed_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Veromed_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>«Альтмедика»</span></td><td class="tdRedMoney"><span id="redMoney_Alt_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Alt_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>«Диагностика и Лечение»</span></td><td class="tdRedMoney"><span id="redMoney_Dia_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Dia_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>Володина</span></td><td class="tdRedMoney"><span id="redMoney_Volodina_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Volodina_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>прочие</span></td><td class="tdRedMoney"><span id="redMoney_Else_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Else_value">0</span></td>
+ 		</tr><tr>
+ 			<td class="tdFirm"><span>пациенты</span></td><td colspan="2" class="tdGreenMoney"><span id="greenMoney_Patients_value">0</span></td>
+ 		</tr><tr>
+ 			<td id="itogo"><span>ИТОГО</span></td><td class="tdRedMoney"><span id="redMoney_Itogo_value">0</span></td><td class="tdGreenMoney"><span id="greenMoney_Itogo_value">0</span></td>
+ 		</tr>	
+ 	</table>
+ <script type="text/javascript" src="{% static "MEDview/JS/stats.js" %}"></script>
+ </body>
+</html>

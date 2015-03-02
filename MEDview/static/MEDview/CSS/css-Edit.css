@@ -1,0 +1,430 @@
+@font-face {
+	font-family: Nova;
+	src: url('../FONTS/Permian.woff') format('woff'),
+		 url('../FONTS/Permian.otf') format('truetype');
+}
+
+body {
+	font-family: Nova;
+	font-size: 150%;
+	color: #E5E4D6;
+	margin: 0 auto;
+	background-color: #E5E4D6;
+}
+
+header {
+	background-color: #404242;
+	display: table;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: table-cell;
+	width: auto;
+	color: #E5E4D6;
+	padding-right: 6%;
+	height: 50px;
+	vertical-align: middle;
+}
+#link_to_search {
+	text-align: left;
+}
+#link_to_statistic {
+	text-align: right;
+}
+
+input {
+	font-family: Nova;
+	font-size: 100%;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	border-bottom: 2px solid #404242;
+}
+
+ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+dd {
+	display: none;
+	position: absolute;
+	background-color: #404242;
+	padding: 1%;
+	border: 2px solid #E5E4D6;
+}
+
+dd ul li:hover {
+	background-color: #835985;
+}
+
+textarea {
+	font-family: Nova;
+	font-size: 100%;
+	width: 100%; 
+	background-color: transparent;
+	border: none;
+	resize: none;
+	color: #E5E4D6;
+	overflow: auto;
+}
+
+
+#link_to_search span {
+	background-image: url('../IMG/search_light.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 50%;
+	padding-left: 30px;
+}
+
+#link_to_statistic span {
+	background-image: url('../IMG/stat_light.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 50%;
+	padding-left: 30px;
+}
+
+#calendarHeader_wrapper {
+	background-color: #835985;
+	background-image: url('../IMG/pointer1.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	padding-top: 2%;
+}
+
+.btn_back {
+	background-image: url('../IMG/lefty.png');
+	background-size: contain;
+	background-position: left center;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	float: left;
+	width: 15%;
+}
+.btn_forward {
+	background-image: url('../IMG/righty.png');
+	background-size: contain;
+	background-position: right center;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	float: right;
+	width: 15%;
+}
+
+#year_wrapper {
+	text-align: center;
+	font-weight: bold;
+}
+#day_wrapper {
+	width: 100%;
+	background-color: #F05F3B;
+}
+#selected_day_leftCol {
+	font-weight: bold;
+	font-size: 255%;
+	width: 35%;
+	text-align: center;
+}
+#month_wrapper {
+	font-weight: bold;
+	text-align: center;
+}
+#Months_list, #Years_list {
+	position: relative;
+}    
+#selected_month, #selected_year {
+	cursor: pointer;
+}    
+#grid_wrapper {
+	background-color: #E5E4D6;
+	color: #404242;
+	width: 100%;
+	background-image: url('../IMG/pointer2.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	padding-top: 2%;
+}
+#calendarMesh {
+	width: 100%;
+}
+#calendarMesh tr:first-child{
+	width: 100%;
+	text-align: center;
+}
+#calendar_weeksRow td:nth-child(1n+6) {
+	background-color: #FF5846;
+}
+.days_Weekends_days {
+	text-align: center;
+	cursor: pointer;
+}
+.days_Works_days {
+	text-align: center;
+	cursor: pointer;
+}
+.days_empty {
+	visibility: hidden;
+}
+.day_work {
+	border: 1px solid #404242;
+	width: 100%;
+}
+.day_vizovov {
+	font-size: 60%;
+	width: 100%;
+	background-color: #835985;
+	color: #E5E4D6;
+	border: 1px solid #404242;
+}
+.day_money {
+	background-color: #669900;
+	font-size: 60%;
+	width: 100%;
+	color: #E5E4D6;
+	border: 1px solid #404242;
+}
+
+#new_record_wrapper {
+	width: 100%;
+	background-color: #835985;
+}
+.new_record {
+	width: auto;
+	text-align: right;
+	padding-right: 5%;
+}
+#new_record_new {
+	cursor: pointer;
+}
+#search_lable {
+	display: none;
+}
+#new_record_search {
+	width: 10%;
+	background-image: url('../IMG/add_search.png');
+	background-size: contain;
+	background-position: right center;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	float: left;
+}
+#new_record_search_input {
+	background-color: #E5E4D6;
+	background-image: url('../IMG/pointer2.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	padding: 2%;
+	display: none;
+}
+#new_record_search_results {
+	background-image: url('../IMG/Light.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	display: none;
+}
+.ner_record_search_results_patient {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.ner_record_search_results_patient {
+	padding-left: 1%;
+	background-image: url('../IMG/people.png');
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+#records_patients {
+	background-color: #33495E;
+	background-image: url('../IMG/Violet.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	padding: 2%;
+	display: none;
+}
+#record_patient_loading {
+	width: 100%;
+	height: 50px;
+	background-image: url('../IMG/loading-big.gif');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+.record_patient_wrapper {
+	width: 100%;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+.record_patient_leftCol {
+	float: left;
+}
+.record_patient_rightCol {
+	text-align: right;
+}
+.record_patient_redMoney {
+	background-color: #FF5846;
+	width: 30%;
+	text-align: center;
+	color: #E5E4D6;
+}
+.record_patient_greenMoney {
+	background-color: #8EA654;
+	width: 30%;
+	text-align: center;
+	color: #E5E4D6;
+}
+
+#patient_record_info_wrapper {
+	padding: 1%;
+	background-color: #2880B9;
+	background-image: url('../IMG/Darkblue.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	display: none;
+}
+#patient_record_info_wrapper table {
+	width: 100%;
+}
+.patient_record_info_label {
+	background-color: #FF5846;
+	color: #E5E4D6;
+	width: 7%;
+	text-align: center;
+}
+.patient_record_input {
+	border-bottom: 2px solid #E5E4D6;
+	color: #E5E4D6;
+}
+#Age_input {
+	width: 10%;
+}
+#Age {
+	text-align: center;
+}
+#Name3_input {
+	width: auto;
+}
+.patient_record_label {
+	background-color: #FF5846;
+	color: #E5E4D6;
+	text-align: center;
+}
+#patient_record_value_house {
+	width: 25%;
+}
+#patient_record_value_KC {
+	width: 25%;
+}
+#patient_record_value_porch {
+	width: 25%;
+}
+
+#patient_record_textarea_wrapper {
+	margin-top: 1%;
+	padding: 1%;
+	background-color: #33495E;
+	background-image: url('../IMG/Blue.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 5%;
+	padding-top: 15px;
+}
+#patient_record_switches {
+	width: 100%;
+}
+#switcher_notes {
+	width: 50%;
+	float: left;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+}
+#switcher_decease {
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+}
+#notes_wrapper {
+	display: none;
+	width: 100%;
+	overflow: hidden;
+}
+#decease_wrapper {
+	display: none;
+	width: 100%;
+	overflow: hidden;
+}
+
+#save_record {
+	margin-top: 5%;
+	width: 100%;
+	background-color: #FF5846;
+	color: #E5E4D6;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	cursor: pointer;
+}
+#save_record:hover {
+	background-color: #51FF8B;
+	color: #404242;
+}
+
+.live_search {
+	display: none;
+	position: absolute;
+	background-color: #404242;
+	color: #E5E4D6;
+	padding: 1%;
+	cursor: pointer;
+}
+.live_search li:hover {
+	background-color: #835985;
+}
+
+@media only screen and (min-width: 800px) {
+	#calendarHeader_wrapper {
+		float: left;
+		width: 35%;
+		clear: left;
+	}
+	#column_wrapper {
+		width: 65%;
+		float: right;
+	}
+	#patient_record_info_wrapper {
+		float: right;
+		width: 63%;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	#calendarHeader_wrapper {
+		float: left;
+		width: 30%;
+		clear: left;
+	}
+	#column_wrapper {
+		float: left;
+		border-bottom: 5px solid #404242;
+		width: 30%;
+	}
+	#patient_record_info_wrapper {
+		float: right;
+		border-bottom: 5px solid #404242;
+		width: 38%;
+	}
+}

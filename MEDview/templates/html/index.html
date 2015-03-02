@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+ 	<title>MED store 3</title>
+ 	<meta charset="utf-8"/>
+ 	<link href="{% static "MEDview/CSS/style.css" %}" rel="stylesheet">
+ 	<script type="text/javascript" src="{% static "MEDview/JS/jQ.js" %}"></script>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
+ <body>
+ 	<header>
+ 		<nav>
+ 			<span id="lastRecord_label" class="headerSpan">ПОСЛЕДНЯЯ ЗАПИСЬ</span>
+ 			<span id="lastRecord_day" class="lastRecord_date headerSpan">30</span>
+ 			<span id="lastRecord_month" class="lastRecord_date headerSpan">СЕНТЯБРЯ</span>
+ 			<span id="lastRecord_year" class="lastRecord_date headerSpan">2013</span>
+ 			<ul class="headerList_links">
+ 				<li>СТАТИСТИКА</li>
+ 				<li>ПОИСК</li>
+ 			</ul>
+ 		</nav>
+ 	</header>
+ 	<table id="leftTable_Records">
+ 		<tr>
+ 			<td>
+ 				<ul>
+ 					<li>Иванова</li>
+ 					<li>Екатерина</li>
+ 					<li>Геннадьевна</li>
+ 				</ul>
+ 			</td>
+ 			<td>
+ 				<ul>
+ 					<li>2500</li>
+ 					<li>1 Доктор</li>
+ 					<li>1000</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<ul>
+ 					<li>Иванова</li>
+ 					<li>Екатерина</li>
+ 					<li>Геннадьевна</li>
+ 				</ul>
+ 			</td>
+ 			<td>
+ 				<ul>
+ 					<li>2500</li>
+ 					<li>1 Доктор</li>
+ 					<li>1000</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<ul>
+ 					<li>Иванова</li>
+ 					<li>Екатерина</li>
+ 					<li>Геннадьевна</li>
+ 				</ul>
+ 			</td>
+ 			<td>
+ 				<ul>
+ 					<li>2500</li>
+ 					<li>1 Доктор</li>
+ 					<li>1000</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 	</table>
+ 	<table id="centerTable_Calendar">
+ 		<tr>
+ 			<td id="centerTable_headerDay">
+ 				<div id="centerTable_selectedDay">31</div>
+ 				<div><span>вызовов</span><span>3</span></div>
+ 				<div><span>выручка</span><span>2500</span></div>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td id="centerTable_headerMonth">
+ 				<table>
+ 				 <tr>
+ 				  <td id="centerTable_btnBack_Month"> < </td>
+ 				  <td id="centerTable_monthLabel">сентябрь</td>
+ 				  <td id="centerTable_btnForward_Month"> > </td>
+ 				  <td id="centerTable_btnBack_Year"> < </td>
+ 				  <td id="centerTable_yearLabel">2013</td>
+ 				  <td id="centerTable_btnForward_Year"> > </td>
+ 				 </tr>
+ 				</table>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<table id="calendarMesh">
+ 					<tr id="calendarMesh_weeksLabel">
+ 						<td>П</td><td>В</td><td>С</td><td>Ч</td><td>П</td><td>С</td><td>В</td>
+ 					</tr>
+ 					<tr>
+ 						<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+ 					</tr>
+ 					<tr>
+ 						<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+ 					</tr>
+ 					<tr>
+ 						<td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+ 					</tr>
+ 					<tr>
+ 						<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+ 					</tr>
+ 					<tr>
+ 						<td>29</td><td>30</td><td>31</td><td><br></td><td><br></td><td><br></td><td><br></td>
+ 					</tr>
+ 					<tr>
+ 						<td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td>
+ 					</tr>
+ 				</table>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td id="centerTable_bottomButtons">
+ 				<div>новая запись</div>
+ 				<div>скопировать запись</div>
+ 				<div><table><tr>
+ 					<td id="centerTable_searchInput"><input id="centerTable_search" type="text"></td>
+ 					<td id="centerTable_searchBtn">S</td>
+ 				</tr></table></div>
+ 			</td>
+ 		</tr>
+ 	</table>
+ 	<table id="rightTable">
+ 		<tr>
+ 			<td id="rightTable_names">
+ 				<div>И</div><input type"text" id="">
+ 				<div>Ф</div><input type"text" id="">
+ 				<div>О</div><input type"text" id="">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td id="">
+ 				<div>от</div>
+ 				<ul id="test">
+ 					<li>1</li>
+ 					<li>2</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 	</table>
+ </body>
+</html>

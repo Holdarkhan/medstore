@@ -1,0 +1,163 @@
+@font-face {
+	font-family: Nova;
+	src: url('../FONTS/Permian.woff') format('woff'),
+		 url('../FONTS/Permian.otf') format('truetype');
+}
+
+body {
+	font-family: Nova;
+	font-size: 150%;
+	color: #E5E4D6;
+	margin: 0 auto;
+	background-color: #E5E4D6;
+}
+
+header {
+	background-color: #404242;
+	display: table;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: table-cell;
+	width: auto;
+	color: #E5E4D6;
+	padding-right: 6%;
+	height: 50px;
+	vertical-align: middle;
+}
+#link_to_edit {
+	text-align: left;
+}
+#link_to_statistic {
+	text-align: right;
+}
+
+#link_to_edit span {
+	background-image: url('../IMG/edit.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 50%;
+	padding-left: 30px;
+}
+
+#link_to_statistic span {
+	background-image: url('../IMG/stat_light.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 50%;
+	padding-left: 30px;
+}
+
+#panel_of_years_wrapper {
+	background-color: transparent;
+	padding: 1%;
+}
+#panel_of_months_wrapper {
+	background-color: transparent;
+	padding: 1%;
+}
+.bricks_months:hover {
+	background-color: #BC0000;
+}
+.bricks_years:hover {
+	background-color: #BC0000;
+}
+.bricks_years {
+	background-color: #404242;
+	width: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-bottom: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+.bricks_months {
+	background-color: #404242;
+	width: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-bottom: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+.bricks_month_num {
+	display: none;
+}
+.y_tag {
+	display: none;
+}
+
+#result_table {
+	width: 100%;
+	display: none;
+}
+#result_table td {
+	padding: 1%;
+}
+
+.firm_vcounts {
+	background-color: #404242;
+	width: 20%;
+	text-align: center;
+}
+.firm_RED {
+	background-color: #F05F3B;
+	width: 20%;
+	text-align: center;
+}
+.firm_GREEN {
+	background-color: #669900;
+	width: 20%;
+	text-align: center;
+}
+.table_firm {
+	background-color: #835985;
+}
+.table_ITOGO {
+	background-color: #2880B9;
+	text-align: right;
+}
+
+#itogo_vcounts {
+	background-color: black;
+	font-weight: bold;
+}
+#itogo_RED {
+	background-color: #BC0000;
+	font-weight: bold;
+}
+#itogo_GREEN {
+	background-color: #005E06;
+	font-weight: bold;
+}
+
+#submit {
+	background-color: #F05F3B;
+	margin-top: 1%;
+	text-align: center;
+	color: #E5E4D6;
+	padding: 1%;
+	cursor: pointer;
+}
+
+#loading {
+	width: 100%;
+	background-image: url('../IMG/loading-big.gif');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #404242;
+	padding: 2%;
+	display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+
+}
+@media only screen and (min-width: 1600px) {
+
+}

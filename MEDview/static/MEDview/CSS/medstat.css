@@ -1,0 +1,102 @@
+@font-face {
+	font-family: PT;
+	src: url('../FONTS/PT-Sans.ttf');
+}
+body {
+	font-family: PT;
+	font-size: 200%;
+	color: #FFF;
+	margin: 0 auto;
+	background-image: url('../IMG/bg.jpg');
+	padding: 1%;
+}
+textarea {
+	font-family: PT;
+	font-size: 100%;
+	color: #FFF;
+	background-color: #8295D7;
+	box-shadow: 0 3px 6px -6px black;
+	resize: none;
+	border: none;
+	width: 100%;
+}
+ul {
+	margin: 0;
+}
+input {
+	font-family: PT;
+	font-size: 100%;
+	border: none;
+}
+.Bricks {
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+}
+.tdBricks:hover {
+	background-color: #50B72A;
+}
+.tdBricks {
+	padding: 5px;
+	background-color: #9573BF;
+	text-align: center;
+	cursor: pointer;
+}
+.brickSelected {
+	background-color: #F36825;
+}
+.mBricks_number {
+	display: none;
+}
+#button:hover {
+	background-color: #70E71A;
+	border-bottom: 5px solid #60B71A;
+}
+#button {
+	background-color: #50B72A;
+	border-bottom: 5px solid #40972A;
+	box-shadow: 0 8px 6px -6px black;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#Firms_Stats {
+	width: 100%;
+}
+.tdFirm {
+	padding: 5px;
+	background-color: #9573BF;
+}
+.tdRedMoney {
+	background-color: #A8493D;
+	text-align: center;
+	width: 25%;
+}
+.tdGreenMoney {
+	background-color: #50B72A;
+	text-align: center;
+	width: 25%;
+}
+#itogo {
+	padding: 5px;
+	background-color: #F36825;
+	text-align: right;
+}
+
+@media only screen and (max-width: 1366px) {
+	body { font-size: 150%; }
+
+@media only screen and (max-width: 1280px) {
+	body { font-size: 100%; }
+
+@media only screen and (max-width: 800px) {
+	body { font-size: 90%; }
+}
+@media only screen and (max-width: 768px) {
+	body { font-size: 90%; }
+}
+@media only screen and (max-width: 480px) {
+	body { font-size: 80%; }
+	textarea { display: none; }
+}
