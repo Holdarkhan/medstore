@@ -1,1 +1,0 @@
-MedStore 3
